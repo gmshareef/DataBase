@@ -17,11 +17,11 @@ public class DataStore {
 
     }
 
-    public void printDataBase(){
-        setDataBase(111,"Ruby", 300000);
-        setDataBase(112, "Diamond", 300000);
-        setDataBase(113, "Gold", 50000);
-    }
+//    public void printDataBase(){
+//        setDataBase(111,"Ruby", 300000);
+//        setDataBase(112, "Diamond", 300000);
+//        setDataBase(113, "Gold", 50000);
+//    }
 
     public List<DataBase> dataBaseList(){
         return  dataBaseList;

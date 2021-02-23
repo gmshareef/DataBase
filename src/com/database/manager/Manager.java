@@ -8,45 +8,50 @@ import java.util.List;
 
 public class Manager {
     Dao dao = new Dao();
-  List<DataBase> list = dao.dataBaseList();
+    List<DataBase> list = dao.dataBaseList();
 
-    public void printDataBase(){
-        dao.printDataBase();
+    public void setDataBase(int id, String name, int cost) {
+        dao.setDataBase(id,name,cost);
     }
+
+//    public void printDataBase(){
+//        dao.printDataBase();
+//    }
+
     public void dataBaseList(){
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
     }
 
-    public void searchDataBase() {
-        System.out.println("Search database");
+    public void searchDataBase(int id) {
+//        System.out.println("Search database");
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getId() == 111) {
+            if (list.get(i).getId() == id) {
                 System.out.println(list.get(i));
             }
         }
     }
 
-    public void updateDataBase() {
-        System.out.println("Update record");
+    public void updateDataBase(int id, String name, int cost) {
+//        System.out.println("Update record");
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getId()==111) {
-                list.get(i).setName("Gem");
-                list.get(i).setCost(20000);
+            if (list.get(i).getId()==id) {
+                list.get(i).setName(name);
+                list.get(i).setCost(cost);
                 System.out.println(list.get(i));
             }
         }
     }
-    public void deleteDataBase() {
-        System.out.println("Delete record");
+    public void deleteDataBase(int id) {
+//        System.out.println("Delete record");
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getId()==113) {
+            if (list.get(i).getId()==id) {
                 list.remove(i);
             }
         }
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getId()!=113) {
+            if (list.get(i).getId()!=id) {
                 System.out.println("Record deleted");
                 break;
             }
